@@ -1,0 +1,84 @@
+@import '../../_base.scss';
+
+.comments{
+  width : 100%;
+  color : $text-color;
+  padding : 10px;
+  
+  p{
+    font-size: clamp(15px , 1.2vw , 20px);
+  }
+
+  form{
+    width: 100%;
+    display : flex;
+    padding : 10px;
+    
+    margin: 10px 0;
+    img{
+      width : 40px;
+      height : 40px;
+      border-radius: 50%;
+      object-fit: contain; 
+      margin-right: 10px; 
+    }
+
+    input{
+      border : none;
+      width : 90%;
+      background-color: transparent;
+      color : white;
+      border-bottom: 1px solid $border-color;
+      padding : 0.5em;
+      font-size: clamp(15px , 1.5vw , 22px);
+      font-weight: 100;
+
+      &:focus{
+          outline: none;
+      }
+    }
+
+    button{
+        color : white;
+        border: none;
+        background-color: $border-color;
+        padding : 0.5em;
+        cursor: pointer;
+    }
+  }
+
+  .comment{
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid $border-color;
+    img{
+        width : 45px;
+        height : 45px;
+        border-radius: 50%;
+        object-fit: contain;
+        margin-right : 25px; 
+    }
+
+    div{
+    display: flex;
+    flex-direction: column;
+
+    p{
+        color : $text-color;
+        margin-bottom : 10px;
+    }
+    .showmore{
+       color : white;
+      a{
+        text-decoration: none;
+        color: orange;
+      }
+ 
+    } 
+   
+    }
+
+  
+  }
+}

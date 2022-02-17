@@ -1,0 +1,81 @@
+@import "../../_base.scss";
+
+.channelscreen{
+ width : 80%;
+ margin-left: auto;
+ margin-top: 10vh;
+ 
+&__channelInfo{
+    display : flex;
+    width : 100%;
+    padding : 10px 20px;
+    justify-content: space-between;
+    align-items: flex-end;
+
+div{
+    display: flex;
+    align-items: center;
+
+    img{
+        width : clamp(50px , 7vw , 100px);
+        height : clamp(50px , 7vw , 100px);
+        border : none;
+        margin-right: 15px;
+    }
+
+    div{
+        display: flex;
+        flex-direction: column;
+     
+       .title{
+           color : white;
+           font-size: clamp(20px , 2vw , 35px);
+           margin-bottom: 10px;
+       }
+    }
+}
+button{
+  border : none;
+  cursor : pointer;
+ // background-color: red;
+  color : white;
+  padding : 0.5em;
+  font-weight: bold;
+  position: absolute;
+  right: 10px;
+}
+
+.btn-red{
+ background-color: red; 
+}
+
+.btn-grey{
+background-color: lightgray;
+}
+}
+
+&__grid{
+  width :80vw;
+  padding: 10px;
+  
+.channelscreen__griditem{
+ // border : 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+}
+
+}
+
+@media (max-width : $breakpoint-medium){
+   .channelscreen{
+       width : 90%;
+   } 
+}
+
+@media(max-width : $breakpoint-small){
+  .channelscreen{
+      width : 100%;
+  }  
+}

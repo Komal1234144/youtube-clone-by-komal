@@ -1,0 +1,56 @@
+@import '../../_base.scss';
+
+.watchscreen{
+ width : 80%;
+ margin-left: auto;
+ margin-top : auto;
+ //box-sizing: border-box;
+ //border :1px solid white;
+ font-weight: 100;
+
+hr{
+  border : 0.1px solid $border-color;
+}
+
+ &__grid{
+    margin-top: 10vh;
+    padding: 10px;
+ }
+
+//  .iframe{
+//   width : 90%;
+//   height : 15%;
+//   margin-left : 5%;
+// }  
+
+}
+
+@media(max-width : $breakpoint-small){
+  .watchscreen{
+    width : 100%;
+    margin: auto;
+    
+    &__grid{
+      padding : 0;
+    }
+
+    // .iframe{
+    //   margin-left: 0;
+    //   border : 1px solid red;
+    // }
+    
+   
+  }
+  
+}
+
+@media(max-width : $breakpoint-medium){
+  .watchscreen{
+    width : 90%;
+
+    // .iframe{
+    //   width : 98%;
+    //   height: 20%;
+    // }
+  }
+}

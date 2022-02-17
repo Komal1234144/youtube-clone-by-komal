@@ -1,0 +1,40 @@
+@import '../../_base.scss';
+
+.categoriesbar{
+  border : 1px solid $border-color;
+  display : flex;
+  align-items: center;
+  padding : 10px;
+  padding-bottom: 0px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  background-color: $black-secondary;
+  position: sticky;
+  top : 10vh;
+  height : 60px;
+  z-index : 2;
+ stroke-width: none;
+
+ &::-webkit-scrollbar{
+   width : 0px
+ }
+
+ span{
+  padding : 5px 10px;
+  margin-right: 8px;
+  border-radius: 15px;
+  border : 1px solid $border-color;  
+  cursor: pointer;
+  white-space: nowrap;
+  &:hover{
+ background-color: #374a59;
+  }
+
+  &.active{
+    color : white;
+    background-color: #606060;
+    border-color: $border-color;  
+  }
+ } 
+}
+

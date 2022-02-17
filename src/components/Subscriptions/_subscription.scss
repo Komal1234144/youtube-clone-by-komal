@@ -1,0 +1,22 @@
+@import '../../_base.scss';
+
+.subscription{
+    width: 80vw;
+    margin-left: 20vw;
+    margin-top : 10vh;
+    padding : clamp(10px , 1.5vw , 20px);
+    }
+    
+    @media(max-width : $breakpoint-medium){
+        .subscription{
+            //width : 90vw;
+            margin-left: 10vw;
+        }
+    }
+    
+    @media(max-width : $breakpoint-small){
+        .subscription{
+            width : 100%;
+            margin-left: 0;
+        }
+    }

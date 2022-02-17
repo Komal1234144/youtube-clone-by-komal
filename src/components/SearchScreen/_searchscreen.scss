@@ -1,0 +1,22 @@
+@import '../../_base.scss';
+
+.searchscreen{
+width: 80vw;
+margin-left: 20vw;
+margin-top : 10vh;
+padding : clamp(10px , 1.5vw , 20px);
+}
+
+@media(max-width : $breakpoint-medium){
+    .searchscreen{
+        //width : 90vw;
+        margin-left: 10vw;
+    }
+}
+
+@media(max-width : $breakpoint-small){
+    .searchscreen{
+        width : 100%;
+        margin-left: 0;
+    }
+}

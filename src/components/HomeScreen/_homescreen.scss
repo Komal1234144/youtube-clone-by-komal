@@ -1,0 +1,45 @@
+@import "../../_base.scss";
+
+.homescreen{
+ width : 80%;
+ margin-left: auto;
+ margin-top : auto;
+ 
+&__grid{
+  width :80vw;
+  margin-top: 10vh;
+  padding: 10px;
+  
+.homescreen__griditem{
+ // border : 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}  
+}
+
+}
+
+@media (max-width : $breakpoint-medium){
+   .homescreen{
+       width : 90%;
+    &__grid{
+      .homescreen__griditem{
+        height: 350px;
+      }
+    }    
+   } 
+}
+
+@media(max-width : $breakpoint-small){
+  .homescreen{
+      width : 100%;
+      margin-left: auto;
+      margin-right: auto;
+      &__grid{
+        .homescreen__griditem{
+          height: 250px;
+        }
+      }   
+  }  
+}
