@@ -8,12 +8,12 @@ const firebaseConfig = {
   // storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
   // messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDERID,
   // appId: process.env.REACT_APP_FIREBASE_API_ID
-  apiKey: "AIzaSyBum6B6ipTK4KzMiNmxXNqQo38Hhf2I9ys",
-  authDomain: "clone-dfe2b.firebaseapp.com",
-  projectId: "clone-dfe2b",
-  storageBucket: "clone-dfe2b.appspot.com",
-  messagingSenderId: "606119642129",
-  appId: "1:606119642129:web:906e99abe5290229e41db0"
+  apiKey: "AIzaSyBzRmn0NiYn2NTrTnvwgeWt9AkUdhYOKuA",
+  authDomain: "clone-3c469.firebaseapp.com",
+  projectId: "clone-3c469",
+  storageBucket: "clone-3c469.appspot.com",
+  messagingSenderId: "436002615543",
+  appId: "1:436002615543:web:76591dfb89f744eb2ee3f2"
 };
 
 
