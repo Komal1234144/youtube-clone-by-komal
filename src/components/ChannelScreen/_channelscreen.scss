@@ -37,7 +37,7 @@ div{
 button{
   border : none;
   cursor : pointer;
- // background-color: red;
+  background-color: grey;
   color : white;
   padding : 0.5em;
   font-weight: bold;
@@ -45,13 +45,6 @@ button{
   right: 10px;
 }
 
-.btn-red{
- background-color: red; 
-}
-
-.btn-grey{
-background-color: lightgray;
-}
 }
 
 &__grid{

@@ -21,7 +21,7 @@ useEffect(()=>{
 
 const {videos , loading} = useSelector((state)=>state.channelVideos);  
 const {snippet , statistics} = useSelector((state)=>state.channel.channel);
-const { subscriptionStatus} = useSelector((state)=>state.channel)
+
   return (
     <div className='channelscreen'>
     
@@ -33,8 +33,8 @@ const { subscriptionStatus} = useSelector((state)=>state.channel)
       <p>{numeral(statistics?.subscriberCount).format('0 a')} subscribers</p>
     </div>
     </div>
-    <button className={!subscriptionStatus?'btn-red' :'btn-grey'}>
-    {subscriptionStatus ? 'SUBSCRIBED' : 'SUBSCRIBE'}
+    <button>
+      SUBSCRIBED
     </button>
   </div>
    <hr/>

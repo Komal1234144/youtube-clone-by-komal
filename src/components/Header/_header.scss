@@ -76,7 +76,10 @@ cursor : pointer;}
 
 form{
  flex : 1;   
- height : 70%;
+ height : 100%;
+ .header__input{
+   height : 100%;
+ }
 }
 
 .header__icons>*:not(.header__avatar){
