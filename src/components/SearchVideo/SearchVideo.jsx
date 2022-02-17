@@ -13,33 +13,36 @@ const SearchVideo = ({video , loading , type , searched , subscreen}) => {
 
  const {snippet} = video;     
  
- const id = type==='youtube#video' ? video.id.videoId : video.id.channelId;
- const channelId = video?.snippet?.channelId
+ const id = type==='youtube#video' ? video?.id?.videoId : video?.id;
+ const channelId = video?.snippet?.resourceId?.channelId
  const published = snippet&&moment(snippet.publishedAt).fromNow()
- //console.log(id)
- //console.log(channelId)
+ console.log(id)
+ console.log(channelId)
  const [duration , setDuration] = useState('')
  const [views , setViews] = useState('')
  const [channelIcon , setChannelIcon] = useState('')
 
- //fetch video details 
- useEffect(async()=>{
-  const {data : {items} , data} = await request('/videos', {
-    params:{
-      part : 'contentDetails,statistics',
-      id : id
-    }
-  })
+ //fetch video details
+ 
+  useEffect(async()=>{
+    const {data : {items} , data} = await request('/videos', {
+      params:{
+        part : 'contentDetails,statistics',
+        id : id
+      }
+    })
+    
+    const timing = items[0]?.contentDetails?.duration;
+    const seconds = moment.duration(timing).asSeconds();
+    const dur = moment.utc(seconds * 1000).format('mm:ss');
+    const viewCount = items[0]?.statistics.viewCount;
+   
+    (id && !subscreen) && setDuration(dur);
+    (id && !subscreen) && setViews(numeral(viewCount).format('0 a'))
+   
+   },[id])
+ 
   
-  const timing = items[0]?.contentDetails?.duration;
-  const seconds = moment.duration(timing).asSeconds();
-  const dur = moment.utc(seconds * 1000).format('mm:ss');
-  const viewCount = items[0]?.statistics.viewCount;
- 
-  id && setDuration(dur);
-  id && setViews(numeral(viewCount).format('0 a'))
- 
- },[id])
 
 //fetch channel details
  useEffect(async()=>{
