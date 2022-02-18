@@ -60,9 +60,10 @@ img{
   .video{
   
     &__top{
-      height: 70%;
+      height: 80%;
       img{
-        object-fit: cover;
+        height: 100%;
+        object-fit: contain;
       }
     }
   }
@@ -72,9 +73,6 @@ img{
   .video{
      width : 90%;
      height : 90%;
-&__top{
-  height: 60%;
-}
   }
 }
 

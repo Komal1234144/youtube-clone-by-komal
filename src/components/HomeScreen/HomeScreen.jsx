@@ -28,6 +28,7 @@ return(
     <div className='homescreen'>
         
        <CategoriesBar/>
+       {!videos && <p>Couldn't fetch data because the api's usage maximum quota exceeded. Sorry for inconvenience</p>}
        <InfiniteScroll
        dataLength={videos.length} 
        next={fetchData}

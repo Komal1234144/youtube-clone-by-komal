@@ -35,7 +35,7 @@ const published = snippet?moment(snippet.publishedAt).fromNow() : ''
     
    <iframe width="100%" height="300"
           
-   src={`https://www.youtube.com/embed/${video.id}`} 
+   src={`https://www.youtube.com/embed/${video?.id}`} 
    frameBorder={0}
    allowFullScreen={true}
  >

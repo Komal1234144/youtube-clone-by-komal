@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { getVideosByChannel } from '../../redux/actions/videos.action';
-import {getChannelDetails} from '../../redux/actions/channel.action';
+import {getChannelDetails, getSubscriptionStatus} from '../../redux/actions/channel.action';
 import Video from '../Video/Video';
 import uniqid from 'uniqid';
 import './_channelscreen.scss';
@@ -17,11 +17,12 @@ const dispatch = useDispatch()
 useEffect(()=>{
   dispatch(getVideosByChannel(channelId))
   dispatch(getChannelDetails(channelId))
+  dispatch(getSubscriptionStatus(channelId))
 }, [channelId])
 
 const {videos , loading} = useSelector((state)=>state.channelVideos);  
 const {snippet , statistics} = useSelector((state)=>state.channel.channel);
-
+const  {subscriptionStatus} = useSelector((state)=>state.channel)
   return (
     <div className='channelscreen'>
     
@@ -33,8 +34,8 @@ const {snippet , statistics} = useSelector((state)=>state.channel.channel);
       <p>{numeral(statistics?.subscriberCount).format('0 a')} subscribers</p>
     </div>
     </div>
-    <button>
-      SUBSCRIBED
+    <button className={!subscriptionStatus?'btn-red' :'btn-grey'}>
+    {subscriptionStatus ? 'SUBSCRIBED' : 'SUBSCRIBE'}
     </button>
   </div>
    <hr/>

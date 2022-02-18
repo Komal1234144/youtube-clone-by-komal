@@ -67,7 +67,7 @@
 
 @media (max-width : $breakpoint-small){
 .header{
-height: 11vh;
+//height: 10vh;
 .header__menu{
 display : block;
 cursor : pointer;}
@@ -76,7 +76,7 @@ cursor : pointer;}
 
 form{
  flex : 1;   
- height : 60px;
+ height : 50px;
 
  .header__input{
    height : 100%;

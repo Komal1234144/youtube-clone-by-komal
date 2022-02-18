@@ -29,7 +29,7 @@ div{
      
        .title{
            color : white;
-           font-size: clamp(20px , 2vw , 35px);
+           font-size: clamp(17px , 2vw , 35px);
            margin-bottom: 10px;
        }
     }
@@ -37,12 +37,19 @@ div{
 button{
   border : none;
   cursor : pointer;
-  background-color: grey;
+  //background-color: grey;
   color : white;
-  padding : 0.5em;
+  padding : 0.3em;
   font-weight: bold;
   position: absolute;
   right: 10px;
+}
+
+.btn-red{
+  background-color: red;
+}
+.btn-grey{
+  background-color: grey;
 }
 
 }

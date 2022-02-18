@@ -1,10 +1,9 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getSubscribedChannels, getVideosByChannel } from '../../redux/actions/videos.action';
+import { getSubscribedChannels} from '../../redux/actions/videos.action';
 import SearchVideo from '../SearchVideo/SearchVideo';
 import uniqid from 'uniqid';
 import './_subscription.scss';
-import { useNavigate } from 'react-router-dom';
 
 const Subscription = () => {
 
@@ -16,9 +15,7 @@ const dispatch = useDispatch()
  const {videos , loading} = useSelector((state)=>state.subscribedChannels);
  //console.log(videos)
 
-
-
-
+ 
   return (
     <div className='subscription'>
     {videos?.map((video)=>{

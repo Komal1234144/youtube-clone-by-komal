@@ -13,11 +13,20 @@ const SearchVideo = ({video , loading , type , searched , subscreen}) => {
 
  const {snippet} = video;     
  
- const id = type==='youtube#video' ? video?.id?.videoId : video?.id;
- const channelId = video?.snippet?.resourceId?.channelId
+ const id = type==='youtube#video' && video?.id?.videoId 
+ let channelId ;
+ if(subscreen){
+   channelId = video?.snippet?.resourceId?.channelId
+ }else if(searched && type==='youtube#channel'){
+   channelId = video?.id?.channelId 
+ }else if( searched && type==='youtube#video'){
+   channelId = video?.snippet?.channelId
+ }
+
+// const channelId = subscreen && video?.snippet?.resourceId?.channelId
  const published = snippet&&moment(snippet.publishedAt).fromNow()
- console.log(id)
- console.log(channelId)
+ //console.log(id)
+ //console.log(channelId)
  const [duration , setDuration] = useState('')
  const [views , setViews] = useState('')
  const [channelIcon , setChannelIcon] = useState('')
@@ -63,7 +72,7 @@ const handleRelatedVideo=()=>{
   if(subscreen){
     navigate(`/channel/${video?.snippet?.resourceId?.channelId}`)
   }else if(!subscreen &&  type==='youtube#channel'){
-    navigate(`/channel/${id}`)
+    navigate(`/channel/${channelId}`)
   }
   else if(!subscreen && type==='youtube#video'){
     navigate(`/watch/${video.id.videoId}`)
