@@ -17,7 +17,7 @@ const {video} = useSelector((state)=>state.selectedVideo);
 const {videos , loading} = useSelector((state)=>state.relatedVideos);
 
 useEffect(()=>{
- 
+  window.scrollTo(0,0)
   dispatch(getSelectedVideo(video_id))
   dispatch(getRelatedVideos(video_id))
 },[video_id])

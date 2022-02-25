@@ -1,5 +1,9 @@
 @import '../../_base.scss';
 
+.iframe{
+ height : 300px;
+}
+
 .watchscreen__channeldesc{
     display: flex;
     align-items: center;
@@ -85,6 +89,11 @@
 }
 
 @media(max-width : $breakpoint-small){
+
+ .iframe{
+   height: 250px;
+ } 
+
 .watchscreen__channeldesc{
   
  img{

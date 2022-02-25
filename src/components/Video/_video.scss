@@ -6,15 +6,14 @@
   font-weight: 100;
   width : 90%;
   height: 90%;
-  padding : 10px ;
- // border : 1px solid white;
+ 
  &__top{
- height: 50%;    
+ height: 55%;    
  position: relative;
-
+ 
 img{
 width : 100%;
-height: 100%;    
+height: 100%; 
 object-fit : cover;
 }    
 span{
@@ -47,9 +46,10 @@ span{
 &__channel{
  display : flex;
  align-items: center;
+ font-size: 15px;
 img{
- width : clamp(25px , 3vw , 35px);
- height : clamp(25px , 3vw , 35px);
+ width : clamp(27px , 3vw , 33px);
+ height : clamp(27px , 3vw , 33px);
  border-radius: 50%; 
  margin-right: 10px;  
 } 
@@ -71,8 +71,12 @@ img{
 
 @media(max-width : $breakpoint-small){
   .video{
-     width : 90%;
-     height : 90%;
+    height: 100%;
+
+    &__top{
+      height: 65%;
+      width: 100%;
+    }
   }
 }
 

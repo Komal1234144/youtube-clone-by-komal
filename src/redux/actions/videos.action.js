@@ -14,7 +14,7 @@ export const HomeScreenVideos=()=>async(dispatch, getState)=>{
          dispatch({
              type :HOME_VIDEOS_REQUEST
          })
-      console.log('entered')
+     
       const {data} = await request('/videos', {
            params:{
             part : "snippet,contentDetails,statistics",
@@ -24,7 +24,7 @@ export const HomeScreenVideos=()=>async(dispatch, getState)=>{
             pageToken : getState().homeVideos.nextPageToken ,
            }
        }) 
-     // console.log(data)
+      
        dispatch({
            type : HOME_VIDEOS_SUCCESS,
            payload : {
@@ -58,7 +58,7 @@ export const videosByCategory = (keyword) => async(dispatch, getState) =>{
         pageToken : getState().homeVideos.nextPageToken
        }
    })
-   //console.log(data);
+   console.log(data);
    dispatch({
        type : HOME_VIDEOS_SUCCESS,
        payload : {

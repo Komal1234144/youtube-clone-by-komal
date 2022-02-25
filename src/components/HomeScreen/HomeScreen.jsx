@@ -11,30 +11,32 @@ import uniqid from 'uniqid';
 
 const HomeScreen = () => {
 const {videos , category, loading} = useSelector((state)=>state.homeVideos);
+
 const dispatch = useDispatch();
  useEffect(()=>{
   window.scrollTo(0, 0)
-  dispatch(HomeScreenVideos())
+  category==='All' ?
+  dispatch(HomeScreenVideos()) :
+  dispatch(videosByCategory(category))
  },[category]) 
 
 const fetchData =()=>{
   category==='All' ?
   dispatch(HomeScreenVideos()) :
-  dispatch(videosByCategory())
+  dispatch(videosByCategory(category))
 }
-//console.log(videos)
-//console.log(loading);
+
 return(
     <div className='homescreen'>
         
        <CategoriesBar/>
-       {!videos && <p>Couldn't fetch data because the api's usage maximum quota exceeded. Sorry for inconvenience</p>}
+       {videos.length===0 && <p style={{textAlign:'center' , margin:'10px'}}>Couldn't fetch data because the api's usage maximum quota exceeded. Sorry for inconvenience</p>}
        <InfiniteScroll
        dataLength={videos.length} 
        next={fetchData}
        hasMore={true}
        loader={<h4>Loading...</h4>}>
-       <Grid container className="homescreen__grid" >
+       <Grid container  className="homescreen__grid" >
       
        { !loading ? 
         videos.map((video)=>{

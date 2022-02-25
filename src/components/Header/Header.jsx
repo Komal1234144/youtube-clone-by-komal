@@ -13,7 +13,6 @@ const Header = ({handleToggleSideBar}) => {
   }
 
   const {user} = useSelector((state)=>state.auth);
-  console.log(user)
   //const url = user?.photoURL
   //console.log(url);
 
