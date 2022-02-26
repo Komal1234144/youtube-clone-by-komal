@@ -11,7 +11,7 @@ const Comments = ({id , commentCount}) => {
 const dispatch = useDispatch();
 
 const {comments} = useSelector((state)=>state.comments);
-
+//console.log(comments)
 useEffect(()=>{
    dispatch(getComments(id))
 },[])

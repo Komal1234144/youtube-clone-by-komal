@@ -17,7 +17,7 @@ export const getComments=( id)=>async(dispatch , getState)=>{
            }       
         })
 
-      //  console.log(data)
+        console.log(data)
         dispatch({
             type : GET_COMMENTS_SUCCESS,
             payload : data.items

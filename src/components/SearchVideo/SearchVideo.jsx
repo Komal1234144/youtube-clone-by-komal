@@ -26,7 +26,7 @@ const SearchVideo = ({video , loading , type , searched , subscreen}) => {
 // const channelId = subscreen && video?.snippet?.resourceId?.channelId
  const published = snippet&&moment(snippet.publishedAt).fromNow()
  //console.log(id)
- //console.log(channelId)
+ console.log(channelId)
  const [duration , setDuration] = useState('')
  const [views , setViews] = useState('')
  const [channelIcon , setChannelIcon] = useState('')

@@ -15,7 +15,6 @@ const {id ,
                 thumbnails : {medium} , title}, } = video
 const video_id = channelScreen ? video?.snippet?.resourceId?.videoId : typeof(id)==='object' ? id.videoId : id;
 
-//console.log(video_id)
 
 const [duration , setDuration] = useState(null)
 const [views , setViews] = useState(null)
