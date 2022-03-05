@@ -4,9 +4,10 @@ An app that looks and works like youtube where you can watch videos , sort them 
 Redux , Firebase , Youtube api , React Hooks , SCSS 
 
 <h1>Installation</h1>
-  
-  <p>Run 'npm' command to install the dependencies</p> 
-  <p>Run 'npm start' to see the website on browser</p>
+    
+    'npm' to install the dependencies 
+    
+    'npm start' to start the website and see on browser
   
   <h1>Demo</h1>
   
@@ -17,4 +18,7 @@ Redux , Firebase , Youtube api , React Hooks , SCSS
   <h1>About Me</h1>
   
   I am a aspiring full-stack developer(MERN) with focus on the front-end side.
+  
+<p>Run 'npm' command to install the dependencies</p> 
+  <p>Run 'npm start' to see the website on browser</p>
   
