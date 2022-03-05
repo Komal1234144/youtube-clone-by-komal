@@ -28,7 +28,7 @@ const handleHomeClick=()=>{
        <Home sx={{fontSize : 'clamp(20px, 2.5vw , 30px)' , cursor :'pointer'}}/>
        <span>Home</span>
      </li>
-     <li onClick={handleSubscriptionClick}>
+     <li>
        <Subscriptions sx={{fontSize : 'clamp(20px, 2.5vw , 30px)' , cursor :'pointer'}}/>
        <span>Subscriptions</span>
      </li>
@@ -49,7 +49,7 @@ const handleHomeClick=()=>{
        <span>Something</span>
      </li>
      <hr/>
-     <li onClick={handleLogout}>
+     <li>
        <ExitToApp sx={{fontSize : 'clamp(20px, 2.5vw , 30px)' , cursor :'pointer'}}/>
        <span>Log Out</span>
      </li>

@@ -17,6 +17,7 @@
  }
 
  &__logo{
+ flex : 0.2;
  width : 40px;
  height : 40px;
  object-fit: contain;
@@ -32,7 +33,7 @@
  border-radius: 5px;
  
  .header__input{
-   width : 100%;
+   flex : 1;
    background-color: transparent;
    border : none;
    font-size: 17px;
@@ -40,19 +41,21 @@
    &:focus{outline : none}
  }
  .header__button{
+   flex : 0.1;
     background-color: $border-color;
     border : none;
  }
  .header__search{
    color: $text-color;
    font-size: clamp(20px, 2.5vw , 35px) !important;
+   cursor: pointer;
  }
 }
 
 .header__icons{
  flex :0.2;
  display : flex;
- justify-content: space-around;
+ justify-content: space-evenly;
  align-items: center;
 
  .header__avatar{    
@@ -69,18 +72,23 @@
 .header{
 //height: 10vh;
 .header__menu{
+  flex : 0.3;
 display : block;
-cursor : pointer;}
+cursor : pointer;
+font-size: 25px !important;}
 
 &__logo{display : none}
 
 form{
- flex : 1;   
+ flex : 1.5;   
  height : 50px;
 
  .header__input{
-   height : 100%;
+   flex : 1;
    font-size: 15px;
+ }
+ .header__button{
+   flex : 0.2;
  }
 }
 

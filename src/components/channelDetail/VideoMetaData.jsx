@@ -26,7 +26,7 @@ const published = snippet?moment(snippet.publishedAt).fromNow() : ''
  useEffect(()=>{
   
    dispatch(getChannelDetails(channelId))
-   dispatch(getSubscriptionStatus(channelId))
+  // dispatch(getSubscriptionStatus(channelId))
        
  }, [channelId])
 
@@ -46,7 +46,8 @@ const published = snippet?moment(snippet.publishedAt).fromNow() : ''
     <p>{snippet?.title}</p>
     <div className='details'>
     <span>{views} views • {published} </span>
-    <div><span><ThumbUp/>{likes}</span> 
+    <div>
+    <span><ThumbUp/>{likes}</span> 
     <span><ThumbDown/></span></div>
     </div>
   </div>
@@ -56,7 +57,7 @@ const published = snippet?moment(snippet.publishedAt).fromNow() : ''
     <div className='watchscreen__channeldesc'>
     <img src={channelSnippet?.thumbnails?.default?.url} alt="logo"/>
     <div>
-      <p>{channelSnippet?.title}</p>
+      <p className='title'>{channelSnippet?.title}</p>
       <p>{subscribers} subscribers</p>      
     </div>
     <button className={!subscriptionStatus?'btn-red' :'btn-grey'}>

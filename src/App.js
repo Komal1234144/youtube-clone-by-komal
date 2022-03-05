@@ -30,24 +30,13 @@ const Layout=({children})=>{
 }
 
 function App() {
-const {accesstoken , loading} = useSelector((state)=>state.auth);
-const navigate = useNavigate();
-useEffect(()=>{
- if(!accesstoken && !loading){
-   navigate('/auth')
- }else if(accesstoken && !loading){
-   navigate('/');
- }
-}, [accesstoken , loading])
-
   return(
      
        <Routes>
-        <Route path='/auth' element={<Login/>} />
-         <Route path='/'  element={<Layout children={<HomeScreen/>}/>}/>
+         
+         <Route path='/' element={<Layout children={<HomeScreen/>}/>}/>
          <Route path='/watch/:id'  element={<Layout children={<WatchScreen/>}/>}/>
          <Route path='/search/:query' element={<Layout children={<SearchScreen/>}/>}/>
-         <Route path="/feed/subscription" element={<Layout children={<Subscription/>}/>}/>
          <Route path="/channel/:channelId" element={<Layout children={<ChannelScreen/>}/>}/>
          <Route path="*" element={<Navigate to='/'/>}/>
        </Routes>
@@ -56,3 +45,14 @@ useEffect(()=>{
 }
 
 export default App;
+
+//const {accesstoken , loading} = useSelector((state)=>state.auth);
+// const navigate = useNavigate();
+// useEffect(()=>{
+//  if(!accesstoken && !loading){
+//    navigate('/auth')
+//  }else if(accesstoken && !loading){
+//    navigate('/');
+//  }
+// }, [accesstoken , loading])
+//<Route path="/feed/subscription" element={<Layout children={<Subscription/>}/>}/>

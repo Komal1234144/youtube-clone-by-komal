@@ -16,10 +16,10 @@ const keywords = [
 const CategoriesBar = () => {
 const dispatch = useDispatch()
 const video = useSelector((state)=>state.homeVideos)
-console.log(video)
+
  const [activeElement , setActiveElement] = useState(video?.category) 
  const handleClick = (value) =>{
-  console.log(value)
+ 
      setActiveElement(value)
       value==='All' ?
       dispatch(HomeScreenVideos()) : dispatch(videosByCategory(value))

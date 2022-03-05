@@ -17,7 +17,7 @@ const dispatch = useDispatch()
 useEffect(()=>{
   dispatch(getVideosByChannel(channelId))
   dispatch(getChannelDetails(channelId))
-  dispatch(getSubscriptionStatus(channelId))
+ // dispatch(getSubscriptionStatus(channelId))
 }, [channelId])
 
 const {videos , loading} = useSelector((state)=>state.channelVideos);  

@@ -31,7 +31,7 @@ const Header = ({handleToggleSideBar}) => {
       <div className="header__icons">
          <Notifications sx={{fontSize : 'clamp(20px, 2.5vw , 30px)' , cursor :'pointer'}}/>
          <Apps sx={{fontSize :  'clamp(20px, 2.5vw , 30px)' , cursor : 'pointer'}}/>
-         <img className="header__avatar" src={ user?.photoURL} alt="avatar"/>
+         
       </div>
     </div>
   )

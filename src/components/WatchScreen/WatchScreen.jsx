@@ -22,18 +22,18 @@ useEffect(()=>{
   dispatch(getRelatedVideos(video_id))
 },[video_id])
 
- 
+//<Comments id={video_id} commentCount={video?.statistics?.commentCount}/>
 
 return (
     <div className='watchscreen'>
       <Grid container className='watchscreen__grid'>
-        <Grid item xs={12} md={7.5}>
+        <Grid item xs={12} md={7.5} className='main__video'>
               <VideoMetaData video={video}/>
               <hr/>
-               <Comments id={video_id} commentCount={video?.statistics?.commentCount}/>
+              
         </Grid>
        
-        <Grid item xs={12} md={4.5}>
+        <Grid item xs={12} md={4.5} className="related__videos">
          
           { videos?.filter((video)=>{return video.snippet}).
            map((video)=>{
@@ -50,3 +50,4 @@ return (
 }
 
 export default WatchScreen;
+

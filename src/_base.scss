@@ -22,7 +22,12 @@ body{
     color : $text-color;
     font-family: "Roboto" , sans-serif;
     letter-spacing: 0.1px;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
 
+    &::-webkit-scrollbar {
+      display: none;
+    } 
 }
 
 // ::-webkit-scrollbar{

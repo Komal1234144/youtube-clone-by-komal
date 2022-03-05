@@ -7,9 +7,8 @@
    justify-content: space-between;
    align-items: center;
    color : $text-color;
-   height : 8%;
    border-bottom: 1px solid $border-color;
-   //border : 1px solid red;
+   
  
  &__left{
   width : 100%;
@@ -18,6 +17,7 @@
    justify-content: center;
    align-items: center;
    position: relative;
+   cursor: pointer;
   // border : 1px solid red;
    img{
        width : 100%;
@@ -36,19 +36,17 @@
  &__right{
    padding : 0 10px;
    height: 100%;
- //  border : 1px solid blue;
-   font-size: 18px ;//clamp(12px , 2.5vw , 25px);
+   font-size: clamp(12px , 1vw , 20px);
  p{
-   margin: 3% 0;
+    margin: 5% 0;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
-    overflow: hidden;
-   
+    overflow: hidden;  
  }
  .videoname{
   color : white;
-  font-size: 20px ;//clamp(15px , 3vw , 30px);
+  font-size: clamp(15px , 1.3vw , 23px);
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
@@ -74,21 +72,16 @@
 
 @media(max-width : $breakpoint-medium ){
   .searchvideos{
-    height : 8.5%;
+  
     padding : 5px;  
   }
 }
 
 @media(max-width : $breakpoint-small){
 .searchvideos{
-  height: 8%;
-
+  
   &__right{
     font-size: 12px;
-
-    .videoname{
-      font-size: 18px;
-    }
   }
 }
 }

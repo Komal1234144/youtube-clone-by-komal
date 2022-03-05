@@ -13,13 +13,18 @@ hr{
  &__grid{
     margin-top: 10vh;
     padding: 10px;
- }
+  
+  .related__videos{
+    max-height: 100vh;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
 
-//  .iframe{
-//   width : 90%;
-//   height : 15%;
-//   margin-left : 5%;
-// }  
+    &::-webkit-scrollbar {
+      display: none;
+    } 
+  }
+ }
 
 }
 
