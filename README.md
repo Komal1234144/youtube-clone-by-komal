@@ -5,20 +5,18 @@ Redux , Firebase , Youtube api , React Hooks , SCSS
 
 <h1>Installation</h1>
     
-    'npm' to install the dependencies 
+    Run 'npm' to install the dependencies 
     
-    'npm start' to start the website and see on browser
+    Run 'npm start' to start the website and see on browser
   
   <h1>Demo</h1>
   
-  <img src="https://i.ibb.co/whj8fWM/youtube-clone-gif.gif" width="80%" height="80%"/>
+  <img src="https://i.ibb.co/Q6Rcf7C/ezgif-com-gif-maker-4.gif" width="80%" height="80%"/>
   
-  <a href="https://i.ibb.co/whj8fWM/youtube-clone-gif.gif">https://i.ibb.co/whj8fWM/youtube-clone-gif.gif</a>
+  <a href="https://i.ibb.co/Q6Rcf7C/ezgif-com-gif-maker-4.gif">https://i.ibb.co/Q6Rcf7C/ezgif-com-gif-maker-4.gif</a>
   
   <h1>About Me</h1>
   
   I am a aspiring full-stack developer(MERN) with focus on the front-end side.
   
-<p>Run 'npm' command to install the dependencies</p> 
-  <p>Run 'npm start' to see the website on browser</p>
-  
+
