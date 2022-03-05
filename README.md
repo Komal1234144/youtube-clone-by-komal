@@ -5,7 +5,7 @@ Redux , Firebase , Youtube api , React Hooks , SCSS
 
 <h1>Installation</h1>
     
-    Run 'npm' to install the dependencies 
+    Run 'npm install' to install the dependencies 
     
     Run 'npm start' to start the website and see on browser
   
